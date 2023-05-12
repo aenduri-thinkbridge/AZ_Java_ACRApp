@@ -51,6 +51,7 @@ jobs:
           set -exv
           echo "${{ secrets.AZURE_VM_DEPLOY_KEY }}" > deploy_key.pem   
           chmod 600 deploy_key.pem
-          sudo scp -o StrictHostKeyChecking=no -i deploy_key.pem -r /home/azureuser/actions-runner/_work/AZ_Java_ACRApp/AZ_Java_ACRApp/target/*.jar /opt
+          sudo scp -o StrictHostKeyChecking=no -i deploy_key.pem -r /home/azureuser/actions-runner/_work/AZ_Java_ACRApp/AZ_Java_ACRApp/target/*.jar /opt/helloworld.jar
+          java -jar helloworld.jar &
           
           
