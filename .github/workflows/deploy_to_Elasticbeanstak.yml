@@ -45,5 +45,5 @@ jobs:
           environment_name: Testjavaapp-env
           version_label: ${{github.SHA}}
           region: us-east-2
-#           deployment_package: '*.jar'
+          deployment_package: .jar
           
