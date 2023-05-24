@@ -23,7 +23,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/target/javasolution.jar'
           
   deploy: 
     
@@ -45,5 +45,5 @@ jobs:
           environment_name: Testjavaapp-env
           version_label: ${{github.SHA}}
           region: us-east-2
-          deployment_package: .jar
+          deployment_package: javasolution.jar
           
